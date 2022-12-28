@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayName should render Vrushali 1`] = `
+<div>
+  Welcome 
+  Vrushali
+  !
+</div>
+`;

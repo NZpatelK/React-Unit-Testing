@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Test1 = ({text}) => {
+const TestComponent = ({text}) => {
   return (
     <div data-testid= "text">
         <h1>{text}</h1>
@@ -8,4 +8,4 @@ const Test1 = ({text}) => {
   )
 }
 
-export default Test1
+export default TestComponent
