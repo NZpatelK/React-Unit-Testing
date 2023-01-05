@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ButtonTesting() {
+function ButtonTesting(prop) {
   return (
     <div>
-        <button disabled = {false} data-testid="buttonValue"/>
+        <button disabled = {prop.disabled} data-testid="buttonValue"/>
     </div>
   )
 }
