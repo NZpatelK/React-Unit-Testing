@@ -4,6 +4,8 @@ import userEvent from '@testing-library/user-event';
 import EmailInput from './EmailInput'
 
 describe("email input testing", () => {
+   //This unit test is to test the input field is dsiplay on the screen.
+   //Also test the attribute type should be email type.
     test('render email input', () => { 
         render(<EmailInput/>)
         const emailValue = screen.getByTestId("email-input");
@@ -11,6 +13,7 @@ describe("email input testing", () => {
         expect(emailValue).toHaveAttribute("type", "email");
      });
 
+     //This testing is to test the valid the email input is match email format.
      test("pass valid email to test email input field", () => {
         render(<EmailInput />);
 
@@ -21,6 +24,7 @@ describe("email input testing", () => {
         expect(screen.queryByTestId("error-msg")).not.toBeInTheDocument();
      });
 
+     //This testing is to test the invalid the email input is not match email format.
      test('pass invalid email to test input value', () => { 
         render(<EmailInput />);
 
