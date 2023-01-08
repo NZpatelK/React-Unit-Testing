@@ -13,6 +13,7 @@ function EmailInput() {
             onChange={e => setEmail(e.target.value)}
         />
  
+      {/* This is check the valid if the user input is match email format */}
       { email && !(/\S+@\S+\.\S+/).test(email) && <span className="error" data-testid="error-msg">Please enter a valid email.</span> }
     </div>
   )
