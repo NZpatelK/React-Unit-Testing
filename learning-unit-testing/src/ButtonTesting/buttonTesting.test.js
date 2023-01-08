@@ -11,9 +11,17 @@ test("button should be disabled", () => {
     expect(buttonElem).toBeDisabled();
 })
 
-//This unit testing to test button should be disabled becuase the disabled prop value has assign is "true". 
+//This unit testing to test button should be not disabled becuase the disabled prop value has assign is "true". 
 test("button should not be disabled", () => {
     render(<ButtonTesting disabled = {false} />);
+    const buttonElem = screen.getByTestId("buttonValue");
+    expect(buttonElem).not.toHaveAttribute('disabled')
+    expect(buttonElem).not.toBeDisabled();
+})
+
+//This unit testing to test button should be not disabled becuase the disabled prop value is not assign it. The dsiabled value should be default false.
+test("button should not be disabled", () => {
+    render(<ButtonTesting/>);
     const buttonElem = screen.getByTestId("buttonValue");
     expect(buttonElem).not.toHaveAttribute('disabled')
     expect(buttonElem).not.toBeDisabled();
