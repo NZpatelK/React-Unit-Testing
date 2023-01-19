@@ -1,5 +1,6 @@
 import React, { useState } from 'react';  
 import DisplayName from './DispalyName';  
+
 export const validateName = (name) => {  
  if((name && isNaN(name)) || !name)  
    return false  
