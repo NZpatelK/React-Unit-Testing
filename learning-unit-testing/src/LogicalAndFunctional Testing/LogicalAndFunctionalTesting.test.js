@@ -12,12 +12,17 @@ describe('DisplayName', () => {
     });  
 });   
 
+// This validation testing
 describe('Validation', () => {
+
+    // This is to test when user input the number and error message should be display. 
     test('can set the error if input is number', () => {
         const name = 123;
         const error = validateName(name);
         expect(error).toBeTruthy();
     });
+
+    // This is to test when the input is empty then error message should not display. 
     test('Could reset error if input is empty', () => {
         const name = null;
         const error = validateName(name);

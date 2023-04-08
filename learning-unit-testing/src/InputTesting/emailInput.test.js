@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import EmailInput from './EmailInput'
+import EmailInput from './EmailInput';
 
 describe("email input testing", () => {
    //This unit test is to test the input field is dsiplay on the screen.
